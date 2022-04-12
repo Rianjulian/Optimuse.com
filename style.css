@@ -44,17 +44,24 @@ main {
     padding: 60px 40px;
     background-color: var(--third-color);
     transition: all 1s;
+    height: 100vh;
+    width: 100%;
 }
 
 .tab-link a {
     text-decoration: none;
     font-size: clamp(18px, 1vw, 2em);
-    color: var(--primary-color);
+    color: var(--black);
 }
 
-.button a {
+.button button{
+    background: none;
+    border: none;
+}
+
+.button button a {
     font-size: 16px;
-    padding: 20px 28px;
+    padding: 12px 28px;
     background-color: var(--primary-color);
     border-radius: 80px;
     color: var(--white);
@@ -531,6 +538,27 @@ h1.subtitle {
         padding: 20px 2.5rem;
     }
 
+    #hamburgerButton{
+        display: none;
+    }
+
+    .button a {
+        font-size: 16px;
+        padding: 12px 32px;
+        background-color: var(--primary-color);
+        border-radius: 80px;
+        border: none;
+        color: var(--white);
+    }
+
+    #tabs{
+        display: flex;
+        flex-direction: row;
+        padding: 32px 40px;
+        background:none;
+        height: fit-content;
+    }
+
     .service-content{
         text-align: left;
     }
@@ -698,6 +726,136 @@ h1.subtitle {
 
     .footer{
         grid-auto-flow: column;
+    }
+
+    .button button a:hover{
+        background-color: #1458a5;
+        color: white;
+    }
+
+    /* .button button a:hover{
+        color: white;
+    } */
+
+    .test:hover{
+        background-color: #1458a5;
+        transition: all 0.5s;
+    }
+
+    input[type="button"]:hover{
+        /* background-color: #3075C4; */
+        background-color: #043164;
+        transition: 0.3s ease-in-out;
+    }
+
+    .pricing-card:hover {
+        background-image: linear-gradient( #589AE5 20%, #3075C4);
+        animation: gradient 2s ;
+        /* opacity: 1; */
+        /* transition: opacity 1s; */
+    }
+
+    .pricing-card:hover>.pricing-title>* {
+        color: white;
+    }
+
+    .pricing-card:hover>.pricing-button {
+        background-color: white;
+        color: #3075C4;
+    }
+
+    .pricing-card:hover>.pricing-content{
+        color: white;
+    }
+
+    .main-blog h1:hover{
+        color: #3075C4;
+    }
+
+    .helper-blog h1:hover{
+        color: #3075C4;
+    }
+
+    .tab-link a:hover{
+        color: #3075C4;
+        font-weight: 500;
+    }
+
+    .demo:hover> .fa-chevron-right{
+        transform: translateX(8px);
+    }
+
+    .fa-chevron-right{
+        animation: move 6s;
+        transition: all 0.5s;
+    }
+
+    @keyframes gradient{
+        0%{opacity: 0.5}
+        100%{opacity: 2.0}
+    }
+
+    @keyframes move {
+        0% {
+            transform: translateX(0);
+            transition: all 2s;
+        }
+
+        25% {
+            transform: translateX(12px);
+            transition: all 2s;
+        }
+
+        50% {
+            transform: translateX(0);
+            transition: all 2s;
+        }
+
+        75% {
+            transform: translateX(12px);
+            transition: all 2s;
+        }
+
+        100% {
+            transform: translateX(0);
+            transition: all 2s;
+        }
+    }
+
+    main.login {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 140px 100px 20px;
+    }
+
+    .login img {
+        width: 500px;
+    }
+
+    input#fname {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background-color: lightblue;
+        font-size: 20px;
+    }
+
+    main.profiles {
+        padding: 120px;
+    }
+
+    .profiles h1 {
+        margin-bottom: 20px;
+    }
+
+    .profiles p {
+        line-height: 24px;
     }
 
 }

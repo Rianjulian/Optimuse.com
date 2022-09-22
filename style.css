@@ -125,7 +125,8 @@ button#hamburgerButton {
 .test {
   border: none;
   background-color: var(--primary-color);
-  padding: 20px 2rem;
+  padding: 20px 1.8rem;
+  font-size: clamp(12px,1vw,1.5em);
   border-radius: 40px;
   color: var(--white);
   cursor: pointer;
